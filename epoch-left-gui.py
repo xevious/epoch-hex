@@ -11,11 +11,18 @@ def update_timer():
     root.after(1000, update_timer)
 
 root = tk.Tk()
-root.title("Seconds Left to 32-bit Epoch (Hex)")
+root.title("End of Epoch")
 root.geometry("400x100")
+root.configure(bg="black")
 root.resizable(False, False)
 
-label = tk.Label(root, text="", font=("Courier", 32), fg="black")
+label = tk.Label(
+    root,
+    text="",
+    font=("Courier", 32),
+    fg="lime",
+    bg="black"
+)
 label.pack(expand=True)
 
 update_timer()
